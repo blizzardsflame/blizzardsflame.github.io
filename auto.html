@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>B.A Assurance</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">B.A Assurance</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text">Accueil</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="auto.html" class="nav-link">Auto Malus</a>
+                </li>
+                <li class="nav-item">
+                    <a href="moto.html" class="nav-link">Moto Malus</a>
+                </li>
+                <li class="nav-item">
+                    <a href="habitat.html" class="nav-link">Habitation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="mutuel.html" class="nav-link">Mutuelle</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Contact section -->
+<section id="contactauto" class="py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <div class="card-body">
+                        <h4>Contactez Nous</h4>
+                        <p>loremazdlmqsjdlmqsjldmqsjldmqs</p>
+                        <h4>Adresse</h4>
+                        <p>loremazdlmqsjdlmqsjldmqsjldmqs</p>
+                        <h4>Email</h4>
+                        <p>loremazdlmqsjdlmqsjldmqsjldmqs</p>
+                        <h4>Téléphone</h4>
+                        <p>loremazdlmqsjdlmqsjldmqsjldmqs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card p-4">
+                    <div class="card-body">
+                        <h3 class="text-center">Contactez Nous</h3>
+                        <p>Vieullez remplir le formulaire ci-dessous:</p>
+                        <hr>
+                        </div>
+                    <form onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
+                            <h5>Etat civil:</h5>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                <label>Civilité:*</label>
+                                <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="civiliteOptions" id="Monsieur" value="Monsieur" required>
+                                <label class="form-check-label" for="Monsieur">Monsieur</label>
+                                    </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="civiliteOptions" id="Madame" value="Madame">
+                                    <label class="form-check-label" for="Madame">Madame</label>
+                                    </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="civiliteOptions" id="Societe" value="Société">
+                                    <label class="form-check-label" for="Societe">Société</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Nom">Nom:*</label>
+                                    <input type="text" class="form-control" id="Nom" placeholder="Nom" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Prenom">Prénom:*</label>
+                                    <input type="text" class="form-control" id="Prenom" placeholder="Prénom" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="Adresse">Adresse:*</label>
+                                    <input type="text" class="form-control" id="Adresse" placeholder="Adresse" required>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Ville">Ville:*</label>
+                                    <input type="text" class="form-control" id="Ville" placeholder="Ville" required>
+                                    </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Codepostal">Code postal:*</label>
+                                    <input type="number" class="form-control" id="Codepostal" placeholder="Code postal" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="Datedenaissance">Date de naissance:*</label>
+                                    <input type="date" class="form-control" id="Datedenaissance" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Telephone1">Téléphone1:*</label>
+                                    <input type="tel" class="form-control" id="Telephone1" placeholder="555-555-555" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="Telephone2">Téléphone2:</label>
+                                        <input type="tel" class="form-control" id="Telephone2" placeholder="777-777-777">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                        <label for="Email">E-mail:*</label>
+                                        <input type="email" class="form-control" id="Email" placeholder="nom@example.com" required>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                            <h5>Informations complémentaires:</h5>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="Datepermis">Date d'obtention du permis:*</label>
+                                    <input type="date" class="form-control" id="Datepermis" required>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="Profession">Profession:*</label>
+                                        <select id="Profession" name="Profession" class="form-control" required></select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="Usagevehicule">Usage du véhicule:*</label>
+                                            <select id="Usagevehicule" name="Usagevehicule" class="form-control" required>
+                                                <option selected>Choisissez...</option>
+                                                <option value="Professionnel">Professionnel</option>
+                                                <option value="Personnel">Personnel</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="Marque">Marque de la voiture:</label>
+                                    <input type="text" class="form-control" id="Marque" placeholder="Marque">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="Model">Model de la voiture:</label>
+                                    <input type="text" class="form-control" id="Model" placeholder="Model">
+                                    </div>
+                                </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="Energie">Energie:</label>
+                                    <select id="Energie" name="Energie" class="form-control">
+                                        <option selected>Choisissez...</option>
+                                        <option value="Essence">Essence</option>
+                                        <option value="Diesel">Diesel</option>
+                                        <option value="GPL">GPL</option>
+                                        <option value="GNV">GNV</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="coefMalus">Votre coefficient Bonus/Malus:*</label>
+                                    <input type="range" class="form-control-range custom-range"
+                                                id="coefMalus" name="coefMalus" min="50" max="350" step="1" value="100" required>
+                                                <p>Valeure: <span id="valeurMalus"></span></p>
+                                    </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Motifresil">Motif de la précédente résiliation:</label>
+                                    <select id="Motifresil" name="Motifresil" class="form-control">
+                                        <option selected>Choisissez...</option>
+                                        <option value="Contrat en cours">Contrat en cours</option>
+                                        <option value="Non paiment de prime">Non paiment de prime</option>
+                                        <option value="Sinistre ou alcoolémie">Sinistre ou alcoolémie</option>
+                                        <option value="Fausse déclaration">Fausse déclaration</option>
+                                        <option value="Résiliation client">Résiliation client</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="infoCompl">Informations complémentaires pouvant nous aider à tarifer:</label>
+                                    <textarea class="form-control" id="infoCompl" rows="3"></textarea>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="checkbox" name="checkbox" value="check" id="agree" /> J'ai lu et accepté la <a href="#">politique de confidentialité</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-outline-danger btn-block">Envoyer</button>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- Footer -->
+<footer id="main-footer" class="text-center p-4 bg-light">
+        <div class="container">
+            <div class="row py-3">
+                <div class="col">
+                   <i class="fab fa-facebook-f fa-3x m-2 socialclick" id="gofacebook"></i>
+                    <i class="fab fa-instagram fa-3x m-2 socialclick" id="goinstagram"></i>
+                    <i class="fab fa-twitter fa-3x m-2 socialclick" id="gotwitter"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>Copyright &copy; <span id="year"></span> B.A Assurance</p>
+                </div>
+                </div>
+            </div>
+    </footer>
+    
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script type="text/javascript" src="js/formcontent.js"></script>
+    <script language="javascript">
+    populateProfession("Profession");
+    </script>
+    <script>
+        var slider = document.getElementById("coefMalus");
+        var output = document.getElementById("valeurMalus");
+        output.innerHTML = slider.value;
+        
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+        }
+        </script>
+    </body>
+    </html>
