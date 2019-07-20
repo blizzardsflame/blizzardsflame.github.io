@@ -58,12 +58,9 @@ body{
 .socialclick:hover{
     opacity: 0.7;
 }
-.custom-range::-webkit-slider-thumb{
-background: #DC3545;
-}
 
 #valeurMalus{
-    color: darkblue;
+    color: rgb(138, 5, 0);
 }
 
 .about-img {

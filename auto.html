@@ -64,23 +64,23 @@
                         <p>Vieullez remplir le formulaire ci-dessous:</p>
                         <hr>
                         </div>
-                    <form onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
+                    <form class="main-form needs-validation" novalidate>
                             <h5>Etat civil:</h5>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
                                 <label>Civilité:*</label>
-                                <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="civiliteOptions" id="Monsieur" value="Monsieur" required>
-                                <label class="form-check-label" for="Monsieur">Monsieur</label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                <input class="custom-control-input" type="radio" name="civiliteOptions" id="Monsieur" value="Monsieur" required>
+                                <label class="custom-control-label" for="Monsieur">Monsieur</label>
                                     </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="civiliteOptions" id="Madame" value="Madame">
-                                    <label class="form-check-label" for="Madame">Madame</label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input class="custom-control-input" type="radio" name="civiliteOptions" id="Madame" value="Madame">
+                                    <label class="custom-control-label" for="Madame">Madame</label>
                                     </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="civiliteOptions" id="Societe" value="Société">
-                                    <label class="form-check-label" for="Societe">Société</label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input class="custom-control-input" type="radio" name="civiliteOptions" id="Societe" value="Société">
+                                    <label class="custom-control-label" for="Societe">Société</label>
                                     </div>
                                 </div>
                             </div>
@@ -88,14 +88,16 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="Nom">Nom:*</label>
-                                    <input type="text" class="form-control" id="Nom" placeholder="Nom" required>
+                                    <label for="nom">Nom:*</label>
+                                    <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom" required>
+                                    <div class="invalid-feedback">Ce champ est requis</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="Prenom">Prénom:*</label>
-                                    <input type="text" class="form-control" id="Prenom" placeholder="Prénom" required>
+                                    <label for="prenom">Prénom:*</label>
+                                    <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prénom" required>
+                                    <div class="invalid-feedback">Ce champ est requis</div>
                                 </div>
                             </div>
                         </div>
@@ -104,6 +106,7 @@
                                 <div class="form-group">
                                     <label for="Adresse">Adresse:*</label>
                                     <input type="text" class="form-control" id="Adresse" placeholder="Adresse" required>
+                                    <div class="invalid-feedback">Ce champ est requis</div>
                                     </div>
                             </div>
                         </div>
@@ -112,12 +115,14 @@
                                 <div class="form-group">
                                     <label for="Ville">Ville:*</label>
                                     <input type="text" class="form-control" id="Ville" placeholder="Ville" required>
+                                    <div class="invalid-feedback">Ce champ est requis</div>
                                     </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Codepostal">Code postal:*</label>
                                     <input type="number" class="form-control" id="Codepostal" placeholder="Code postal" required>
+                                    <div class="invalid-feedback">Ce champ est requis</div>
                                 </div>
                             </div>
                         </div>
@@ -126,6 +131,7 @@
                                 <div class="form-group">
                                     <label for="Datedenaissance">Date de naissance:*</label>
                                     <input type="date" class="form-control" id="Datedenaissance" required>
+                                    <div class="invalid-feedback">Ce champ est requis</div>
                                 </div>
                             </div>
                         </div>
@@ -134,6 +140,7 @@
                                 <div class="form-group">
                                     <label for="Telephone1">Téléphone1:*</label>
                                     <input type="tel" class="form-control" id="Telephone1" placeholder="555-555-555" required>
+                                    <div class="invalid-feedback">Ce champ est requis</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -146,8 +153,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                        <label for="Email">E-mail:*</label>
-                                        <input type="email" class="form-control" id="Email" placeholder="nom@example.com" required>
+                                    <label for="Email">E-mail:*</label>
+                                    <input type="email" class="form-control" id="Email" placeholder="nom@example.com" required>
+                                    <div class="invalid-feedback">Ce champ est requis</div>
                                 </div>
                             </div>
                         </div>
@@ -158,6 +166,7 @@
                                 <div class="form-group">
                                     <label for="Datepermis">Date d'obtention du permis:*</label>
                                     <input type="date" class="form-control" id="Datepermis" required>
+                                    <div class="invalid-feedback">Ce champ est requis</div>
                                     </div>
                             </div>
                         </div>
@@ -165,17 +174,19 @@
                             <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="Profession">Profession:*</label>
-                                        <select id="Profession" name="Profession" class="form-control" required></select>
+                                        <select id="Profession" name="Profession" class="custom-select browser-default" required></select>
+                                        <div class="invalid-feedback">Ce champ est requis</div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="Usagevehicule">Usage du véhicule:*</label>
-                                            <select id="Usagevehicule" name="Usagevehicule" class="form-control" required>
-                                                <option selected>Choisissez...</option>
+                                            <select id="Usagevehicule" name="Usagevehicule" class="custom-select browser-default" required>
+                                                <option value="">Choisissez...</option>
                                                 <option value="Professionnel">Professionnel</option>
                                                 <option value="Personnel">Personnel</option>
                                                 </select>
+                                                <div class="invalid-feedback">Ce champ est requis</div>
                                         </div>
                                     </div>
                         </div>
@@ -195,8 +206,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="Energie">Energie:</label>
-                                    <select id="Energie" name="Energie" class="form-control">
-                                        <option selected>Choisissez...</option>
+                                    <select id="Energie" name="Energie" class="custom-select browser-default">
+                                        <option value="">Choisissez...</option>
                                         <option value="Essence">Essence</option>
                                         <option value="Diesel">Diesel</option>
                                         <option value="GPL">GPL</option>
@@ -217,8 +228,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Motifresil">Motif de la précédente résiliation:</label>
-                                    <select id="Motifresil" name="Motifresil" class="form-control">
-                                        <option selected>Choisissez...</option>
+                                    <select id="Motifresil" name="Motifresil" class="custom-select browser-default">
+                                        <option value="">Choisissez...</option>
                                         <option value="Contrat en cours">Contrat en cours</option>
                                         <option value="Non paiment de prime">Non paiment de prime</option>
                                         <option value="Sinistre ou alcoolémie">Sinistre ou alcoolémie</option>
@@ -238,7 +249,12 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <input type="checkbox" name="checkbox" value="check" id="agree" /> J'ai lu et accepté la <a href="#">politique de confidentialité</a>
+                                <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" name="accept-terms" id="accept-terms" value="terms et conditions accepté" required/>
+                                <label for="accept-terms" class="custom-control-label">J'ai lu et accepté la 
+                                    <a href="#terms" data-toggle="modal" data-target=".bd-example-modal-xl">politique de confidentialité</a></label>
+                                    <div class="invalid-feedback">Vieullez consulter et valider nos terms et condition avant d'envoyer</div>
+                                    </div>
                             </div>
                         </div>
                         <div class="row">
@@ -252,6 +268,16 @@
             </div>
         </div>
 </section>
+
+<!-- Terms and conditions -->
+<!-- Extra large modal -->
+<div class="modal fade bd-example-modal-xl"  id="#terms" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <p>sodjsqkdljfklsdmfkldsnizdmqiodscklqdsnkld</p>
+        </div>
+    </div>
+</div>
 
 <!-- Footer -->
 <footer id="main-footer" class="text-center p-4 bg-light">
@@ -270,22 +296,9 @@
                 </div>
             </div>
     </footer>
-    
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/style.js"></script>
     <script type="text/javascript" src="js/formcontent.js"></script>
-    <script language="javascript">
-    populateProfession("Profession");
-    </script>
-    <script>
-        var slider = document.getElementById("coefMalus");
-        var output = document.getElementById("valeurMalus");
-        output.innerHTML = slider.value;
-        
-        slider.oninput = function() {
-          output.innerHTML = this.value;
-        }
-        </script>
     </body>
     </html>
