@@ -23,21 +23,35 @@ $motif_resil = $_POST['motifresil'];
 $info_comp = $_POST['infocomp'];
 $term_condition = $_POST['acceptterms'];
 
-$result = $mysqli->query("insert into autoform values('','$civilite','$name','$prenom','$adresse','$ville','$code_postal','$date_de_naissance','$tel1','$tel2','$email','$date_obt_permis','$profession','$usage_vehicule','$marque_voi','$model_voi','$energie','$coefmalus','$motif_resil','$info_comp','$term_condition')");
-if($result){
-  ?>
-  <div class="alert alert-success alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <strong>Terminer!</strong> votre demande a été envoyer.
-  </div>
-  <?php
-} else{
-  ?>
-  <div class="alert alert-danger alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <strong>Erreur!</strong> veuillez remplir tous les champs requis.
-  </div>
-  <?php
+// message that will be displayed when everything is OK :)
+$okMessage = 'Votre demande a été envoyer.Merci!';
+
+// If something goes wrong, we will display this message.
+$errorMessage = 'il y a eu un probleme avec votre demande. Rééssayez SVP';
+
+try
+{
+
+    if(count($_POST) == 0) throw new \Exception('Form is empty');
+
+    $result = $mysqli->query("insert into autoform values('','$civilite','$name','$prenom','$adresse','$ville','$code_postal','$date_de_naissance','$tel1','$tel2','$email','$date_obt_permis','$profession','$usage_vehicule','$marque_voi','$model_voi','$energie','$coefmalus','$motif_resil','$info_comp','$term_condition')");
+
+    $responseArray = array('type' => 'success', 'message' => $okMessage);
+}
+catch (\Exception $e)
+{
+    $responseArray = array('type' => 'danger', 'message' => $errorMessage);
 }
 
-?>
+// if requested by AJAX request return JSON response
+if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    $encoded = json_encode($responseArray);
+
+    header('Content-Type: application/json');
+
+    echo $encoded;
+}
+// else just display the message
+else {
+    echo $responseArray['message'];
+}

@@ -17,30 +17,6 @@ const profession_arr = ["Artisant sédentaire","Artisant non sédentaire","Comme
             new Option(profession_arr[i],profession_arr[i]);
         }
 
-// Form validation
-var formValidation = document.querySelector('.needs-validation');
-
-formValidation.addEventListener('submit', function(event) {
-    if (formValidation.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
-    }
-    formValidation.classList.add('was-validated');
-
-});
-
-
-// alert after validation
-const sendifValid = {
-    target: '#inforesult',
-    url: 'processauto.php',
-    success: function(){
-        alert('Votre demande a bien été transmise')
-    },
-    clearForm: true
-};
-
-
 // range control spinner value
 const slider = document.getElementById("coefmalus");
 const output = document.getElementById("valeurMalus");
@@ -48,3 +24,29 @@ const output = document.getElementById("valeurMalus");
         slider.oninput = function() {
             output.innerHTML = this.value;
         };
+
+//civilité option
+
+$("#monsieur").click(function() {
+    $("#nomsociete").prop("disabled", true);
+    $("#nomsociete").prop('required', false);
+    $("#nom").prop("disabled", false);
+    $("#prenom").prop("disabled", false);
+});
+$("#madame").click(function() {
+    $("#nomsociete").prop("disabled", true);
+    $("#nomsociete").prop('required', false);
+    $("#nom").prop("disabled", false);
+    $("#prenom").prop("disabled", false);
+});
+$("#societe").click(function() {
+    $("#nomsociete").prop("disabled", false);
+    $("#nom").prop("disabled", true);
+    $("#prenom").prop("disabled", true);
+    $("#nom").prop("required", false);
+    $("#prenom").prop("required", false);
+});
+
+
+
+

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-
+<html lang="fr">
 <head>
+    <meta name="description" content="compagnie d'assurance diazassure">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Assurance, Assurance malus, diazassure">
+    <meta name="author" content="Diazassure">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>B.A Assurance</title>
 </head>
@@ -14,8 +16,10 @@
 <body class="bg-dark text-light">
         <nav class="navbar navbar-expand-sm navbar-light">
                 <div class="container">
-                    <a href="index.html" class="navbar-brand">B.A Assurance</a>
-                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="img/Diazmalus%20logo.png" alt="diazmalus logo" style="height:72px;width:72px;
+                        border:1px solid black;"></a>
+                    <button class="navbar-toggler" name="navbarColl" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -68,6 +72,15 @@
                             <p>loremazdlmqsjdlmqsjldmqsjldmqs</p>
                         </div>
                     </div>
+                    <div class="row p-2">
+
+                            <a href="#auto-express-form" data-toggle="modal"
+                               data-target="#auto-express-form">
+                                <i class="fas fa-car fa-3x mb-2 text-warning" id="auto-express"></i></a>
+                            <h3> Auto Express</h3>
+                            <p>Cliquez ici pour un avis express</p>
+
+                    </div>
                 </div>
                 <div class="col-md-8">
                     <div class="card p-4 cardstyle">
@@ -75,9 +88,10 @@
                             <h3 class="text-center">Remplissez votre formulaire pour avoir un devis <span class="text-warning">GRATUITEMENT!</span></h3>
                             <hr class="bg-light">
                         </div>
-                        <div id="inforesultauto"></div>
-                        <form class="main-form needs-validation" method="POST" action="processauto.php" id="autoform"
-                            novalidate>
+                        <form id="autoform" method="POST" action="processauto.php" role="form">
+
+                            <div class="messages"></div>
+
                             <h5>Etat civil:</h5>
                             <div class="row">
                                 <div class="col-md-12">
@@ -85,19 +99,20 @@
                                         <label>Civilité:*</label>
                                         <div class="custom-control custom-radio custom-control-inline">
                                             <input class="custom-control-input" type="radio" name="civilite"
-                                                id="monsieur" value="monsieur" required>
+                                                   id="monsieur" value="monsieur" required>
                                             <label class="custom-control-label" for="monsieur">Monsieur</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input class="custom-control-input" type="radio" name="civilite" id="madame"
-                                                value="madame">
+                                            <input class="custom-control-input" type="radio" name="civilite"
+                                                   id="madame" value="madame">
                                             <label class="custom-control-label" for="madame">Madame</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
                                             <input class="custom-control-input" type="radio" name="civilite"
-                                                id="societe" value="société">
+                                                   id="societe" value="société">
                                             <label class="custom-control-label" for="societe">Société</label>
                                         </div>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                             </div>
@@ -105,37 +120,37 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="nom">Nom:*</label>
-                                        <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom"
-                                            required>
-                                        <div class="invalid-feedback">Ce champ est requis</div>
+                                        <input type="text" class="form-control" name="nom" id="nom"
+                                               placeholder="Nom" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="prenom">Prénom:*</label>
                                         <input type="text" class="form-control" name="prenom" id="prenom"
-                                            placeholder="Prénom" required>
-                                        <div class="invalid-feedback">Ce champ est requis</div>
+                                               placeholder="Prénom" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="nomsociete">Nom de votre société:*</label>
-                                            <input type="text" class="form-control" name="nomsociete" id="nomsociete"
-                                                placeholder="Nom de votre société" required>
-                                            <div class="invalid-feedback">Ce champ est requis</div>
-                                        </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="nomsociete">Société:*</label>
+                                        <input type="text" class="form-control" name="nomsociete" id="nomsociete"
+                                               placeholder="Nom de votre société" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="adresse">Adresse:*</label>
                                         <input type="text" class="form-control" name="adresse" id="adresse"
-                                            placeholder="Adresse" required>
-                                        <div class="invalid-feedback">Ce champ est requis</div>
+                                               placeholder="Adresse" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                             </div>
@@ -144,16 +159,16 @@
                                     <div class="form-group">
                                         <label for="ville">Ville:*</label>
                                         <input type="text" class="form-control" name="ville" id="ville"
-                                            placeholder="Ville" required>
-                                        <div class="invalid-feedback">Ce champ est requis</div>
+                                               placeholder="Ville" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="codepostal">Code postal:*</label>
                                         <input type="number" class="form-control" name="codepostal" id="codepostal"
-                                            placeholder="Code postal" required>
-                                        <div class="invalid-feedback">Ce champ est requis</div>
+                                               placeholder="Code postal" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                             </div>
@@ -162,8 +177,8 @@
                                     <div class="form-group">
                                         <label for="datedenaissance">Date de naissance:*</label>
                                         <input type="date" class="form-control" name="datedenaissance"
-                                            id="datedenaissance" required>
-                                        <div class="invalid-feedback">Ce champ est requis</div>
+                                               id="datedenaissance" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                             </div>
@@ -172,15 +187,15 @@
                                     <div class="form-group">
                                         <label for="tel1">Téléphone1:*</label>
                                         <input type="tel" class="form-control" name="tel1" id="tel1"
-                                            placeholder="555-555-555" required>
-                                        <div class="invalid-feedback">Ce champ est requis</div>
+                                               placeholder="555-555-555" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="tel2">Téléphone2:</label>
                                         <input type="tel" class="form-control" name="tel2" id="tel2"
-                                            placeholder="777-777-777">
+                                               placeholder="777-777-777">
                                     </div>
                                 </div>
                             </div>
@@ -188,9 +203,9 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="email">E-mail:*</label>
-                                        <input type="email" class="form-control" name="email" id="email"
-                                            placeholder="nom@example.com" required>
-                                        <div class="invalid-feedback">Ce champ est requis</div>
+                                        <input type="email" class="form-control" name="email" id="email" data-error="Vieullez utiliser un email valide"
+                                               placeholder="nom@example.com" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                             </div>
@@ -201,8 +216,8 @@
                                     <div class="form-group">
                                         <label for="datepermis">Date d'obtention du permis:*</label>
                                         <input type="date" class="form-control" name="datepermis" id="datepermis"
-                                            required>
-                                        <div class="invalid-feedback">Ce champ est requis</div>
+                                               required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                             </div>
@@ -211,20 +226,20 @@
                                     <div class="form-group">
                                         <label for="profession">Profession:*</label>
                                         <select name="profession" id="profession" class="custom-select browser-default"
-                                            required></select>
-                                        <div class="invalid-feedback">Ce champ est requis</div>
+                                                required></select>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="usagevehicule">Usage du véhicule:*</label>
                                         <select name="usagevehicule" id="usagevehicule"
-                                            class="custom-select browser-default" required>
+                                                class="custom-select browser-default" required>
                                             <option value="">Choisissez...</option>
                                             <option value="Professionnel">Professionnel</option>
                                             <option value="Personnel">Personnel</option>
                                         </select>
-                                        <div class="invalid-feedback">Ce champ est requis</div>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                             </div>
@@ -233,14 +248,14 @@
                                     <div class="form-group">
                                         <label for="marque">Marque de la voiture:</label>
                                         <input type="text" class="form-control" name="marque" id="marque"
-                                            placeholder="Marque">
+                                               placeholder="Marque">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="model">Model de la voiture:</label>
                                         <input type="text" class="form-control" name="model" id="model"
-                                            placeholder="Model">
+                                               placeholder="Model">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -261,7 +276,7 @@
                                     <div class="form-group">
                                         <label for="coefmalus">Votre coefficient Bonus/Malus:*</label>
                                         <input type="range" class="form-control-range custom-range" id="coefmalus"
-                                            name="coefmalus" min="50" max="350" step="1" value="100" required>
+                                               name="coefmalus" min="50" max="350" step="1" value="100" required>
                                         <p>Valeure: <span id="valeurMalus"></span></p>
                                     </div>
                                 </div>
@@ -285,29 +300,31 @@
                                         <label for="infocomp">Informations complémentaires pouvant nous aider à
                                             tarifer:</label>
                                         <textarea class="form-control" name="infocomp" id="infocomp"
-                                            rows="3"></textarea>
+                                                  rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" name="acceptterms"
-                                            id="acceptterms" value="terms et conditions accepté" required />
-                                        <label for="acceptterms" class="custom-control-label">J'ai lu et accepté la
-                                            <a href="#" data-toggle="modal"
-                                                data-target=".bd-example-modal-xl">politique de
-                                                confidentialité</a></label>
-                                        <div class="invalid-feedback">Vieullez consulter et valider nos terms et
-                                            condition avant d'envoyer</div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="acceptterms"
+                                                   id="acceptterms" data-error="Vieullez consulter et valider nos terms et
+                                        condition avant d'envoyer"  value="terms et conditions accepté" required>
+                                            <label for="acceptterms" class="custom-control-label">J'ai lu et accepté la
+                                                <a href="#" data-toggle="modal"
+                                                   data-target=".bd-example-modal-xl">politique de
+                                                    confidentialité</a></label>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
                                     </div>
                                     <hr class="bg-light">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button type="submit" id="submit" value="Submit"
-                                        class="btn btn-outline-danger bg-warning btn-block">ENVOYER</button>
+                                    <input type="submit" id="submit" value="Envoyer"
+                                           class="btn btn-outline-danger bg-warning btn-block btn-send">
                                 </div>
                             </div>
                         </form>
@@ -337,6 +354,25 @@
         </div>
     </div>
 
+        <!-- Extra large modal auto -->
+        <div class="modal fade bd-example-modal-lg" id="auto-express-form" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Auto Express</h2>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <script type="text/javascript">placedesleads_form_id = 1726;</script>
+                        <script type="text/javascript" src="https://lmt.timeonegroup.com/pdl_form.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MY express modals auto-->
+
     <!-- Footer -->
 <footer id="main-footer" class="text-center text-dark p-4">
         <div class="container">
@@ -354,29 +390,13 @@
                 </div>
             </div>
 </footer>
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/autovalidation.js"></script>
     <script type="text/javascript" src="js/formcontent.js"></script>
     <script type="text/javascript" src="js/style.js"></script>
-    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="js/jquery.form.js"></script>
-    <script>
-    $("#monsieur").click(function() {
-        $("#nomsociete").prop("disabled", true);
-        $("#nom").prop("disabled", false);
-        $("#prenom").prop("disabled", false);
-    });
-    $("#madame").click(function() {
-        $("#nomsociete").prop("disabled", true);
-        $("#nom").prop("disabled", false);
-        $("#prenom").prop("disabled", false);
-    });
-    $("#societe").click(function() {
-        $("#nomsociete").prop("disabled", false);
-        $("#nom").prop("disabled", true);
-        $("#prenom").prop("disabled", true);
-    });
-    </script>
 </body>
 
 </html>

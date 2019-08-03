@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-
+<html lang="fr">
 <head>
+    <meta name="description" content="compagnie d'assurance diazassure">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Assurance, Assurance malus, diazassure">
+    <meta name="author" content="Diazassure">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,8 +17,10 @@
 <body class="bg-dark text-light">
 <nav class="navbar navbar-expand-sm navbar-light">
     <div class="container">
-        <a href="index.html" class="navbar-brand">B.A Assurance</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <a href="index.html" class="navbar-brand">
+            <img src="img/Diazmalus%20logo.png" alt="diazmalus logo" style="height:72px;width:72px;
+            border:1px solid black;"></a>
+        <button class="navbar-toggler" name="navbarColl" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -67,6 +72,13 @@
                         <h4>Téléphone</h4>
                         <p>loremazdlmqsjdlmqsjldmqsjldmqs</p>
                     </div>
+                </div>
+                <div class="row text-center">
+                    <a href="#moto-express-form" data-toggle="modal"
+                       data-target="#moto-express-form">
+                        <i class="fas fa-motorcycle fa-3x mb-2 text-warning" id="moto-express"></i> <h3>Moto Express</h3></a>
+
+                    <p>Cliquez ici pour un avis express</p>
                 </div>
             </div>
             <div class="col-md-8">
@@ -337,6 +349,25 @@
     </div>
 </div>
 
+<!-- Extra large modal moto -->
+<div class="modal fade bd-example-modal-lg" id="moto-express-form" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-header">
+                <h2 class="modal-title">Moto Express</h2>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <script type="text/javascript">placedesleads_form_id = 1727;</script>
+                <script type="text/javascript" src="https://lmt.timeonegroup.com/pdl_form.js"></script>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MY express modals moto-->
+
 <!-- Footer -->
 <footer id="main-footer" class="text-center text-dark p-4">
     <div class="container">
@@ -355,28 +386,10 @@
     </div>
 </footer>
 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/formcontent.js"></script>
 <script type="text/javascript" src="js/style.js"></script>
-<script type="text/javascript" src="js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="js/jquery.form.js"></script>
-<script>
-    $("#monsieur").click(function() {
-        $("#nomsociete").prop("disabled", true);
-        $("#nom").prop("disabled", false);
-        $("#prenom").prop("disabled", false);
-    });
-    $("#madame").click(function() {
-        $("#nomsociete").prop("disabled", true);
-        $("#nom").prop("disabled", false);
-        $("#prenom").prop("disabled", false);
-    });
-    $("#societe").click(function() {
-        $("#nomsociete").prop("disabled", false);
-        $("#nom").prop("disabled", true);
-        $("#prenom").prop("disabled", true);
-    });
-</script>
 </body>
 
 </html>
