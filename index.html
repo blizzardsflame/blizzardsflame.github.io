@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta name="description" content="compagnie d'assurance diazassure">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Assurance, Assurance malus, diazassure">
-    <meta name="author" content="Diazassure">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="description" content="Compagnie D'assurance Diaz Malus"/>
+    <meta name="author" content="Diaz Malus"/>
+    <meta name="copyright" content="Diaz Malus" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>B.A Assurance</title>
+    <title>Diaz Malus Site Officiel | Diaz Malus</title>
 </head>
 
 <body class="bg-dark text-light">
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light" data-aos="fade-down">
     <div class="container">
-        <a href="index.html" class="navbar-brand">
-            <img src="img/Diazmalus%20tr.png" alt="diazmalus logo" style="height:72px;width:72px;
+        <a href="accueil.html" class="navbar-brand">
+            <img src="img/Diazmalus%20logo.png" alt="diazmalus logo" style="height:72px;width:72px;
             border:2px solid black;"></a>
-        <button class="navbar-toggler" name="navbarColl" data-toggle="collapse" data-target="#navbarCollapse">
+        <button class="navbar-toggler" name="navbarColl" aria-label="Afficher le menu" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a href="index.html" class="nav-link text">Accueil</a>
+                    <a href="accueil.html" class="nav-link text">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a href="auto.html" class="nav-link text">Auto Malus</a>
@@ -38,7 +38,7 @@
                     <a href="habitat.html" class="nav-link text">Habitation</a>
                 </li>
                 <li class="nav-item">
-                    <a href="mutuel.html" class="nav-link">Mutuelle</a>
+                    <a href="sante.html" class="nav-link">Mutuelle</a>
                 </li>
             </ul>
         </div>
@@ -46,7 +46,7 @@
 </nav>
 
 <!-- Showcase Slider -->
-<section id="showcase">
+<section id="showcase" data-aos="fade-up">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -58,8 +58,8 @@
             <div class="carousel-item carousel-image-1 active">
                 <div class="dark-overlay">
                 <div class="container">
-                    <div class="carousel-caption d-none d-sm-block text-right mb-5">
-                        <h1 class="display-3"><span class="text-warning">Assurance</span> Auto Malus</h1>
+                    <div class="carousel-caption d-sm-block text-right mb-5">
+                        <h2 class="display-3"><span class="text-warning">Assurance</span> Auto Malus</h2>
                         <p class="lead">N'ATTENDEZ PLUS, TROUVEZ UNE ASSURANCE AUTO!</p>
                         <p>DEMANDEZ UN DEVIS <span class="lead text-warning">GRATUITEMENT</span></p>
                         <a href="auto.html" class="btn btn-danger btn-lg">Cliquez ici</a>
@@ -70,8 +70,8 @@
             <div class="carousel-item carousel-image-2">
                 <div class="dark-overlay">
                     <div class="container">
-                        <div class="carousel-caption d-none d-sm-block text-left mb-5">
-                            <h1 class="display-3"><span class="text-warning">Assurance</span> Moto Malus</h1>
+                        <div class="carousel-caption d-sm-block text-left mb-5">
+                            <h2 class="display-3"><span class="text-warning">Assurance</span> Moto Malus</h2>
                             <p class="lead">N'ATTENDEZ PLUS, TROUVEZ UNE ASSURANCE MOTO!</p>
                             <p>DEMANDEZ UN DEVIS <span class="lead text-warning">GRATUITEMENT</span></p>
                             <a href="moto.html" class="btn btn-danger btn-lg">Cliquez ici</a>
@@ -82,8 +82,8 @@
             <div class="carousel-item carousel-image-3">
                     <div class="dark-overlay">
                         <div class="container">
-                            <div class="carousel-caption d-none d-sm-block text-right mb-5">
-                                <h1 class="display-3"><span class="text-warning">Assurance</span> Habitation</h1>
+                            <div class="carousel-caption d-sm-block text-right mb-5">
+                                <h2 class="display-3"><span class="text-warning">Assurance</span> Habitation</h2>
                                 <p class="lead">N'ATTENDEZ PLUS, TROUVEZ UNE ASSURANCE POUR VOTRE DOMICILE!</p>
                                 <p>DEMANDEZ UN DEVIS <span class="lead text-warning">GRATUITEMENT</span></p>
                                 <a href="habitat.html" class="btn btn-danger btn-lg">Cliquez ici</a>
@@ -94,20 +94,20 @@
             <div class="carousel-item carousel-image-4">
                         <div class="dark-overlay">
                             <div class="container">
-                                <div class="carousel-caption d-none d-sm-block text-left mb-5">
-                                    <h1 class="display-3"><span class="text-warning">Assurance</span> Santé</h1>
+                                <div class="carousel-caption d-sm-block text-left mb-5">
+                                    <h2 class="display-3"><span class="text-warning">Assurance</span> Santé</h2>
                                     <p class="lead">N'ATTENDEZ PLUS, TROUVEZ UNE MUTUELLE!</p>
                                     <p>DEMANDEZ UN DEVIS <span class="lead text-warning">GRATUITEMENT</span></p>
-                                    <a href="mutuel.html" class="btn btn-danger btn-lg">Cliquez ici</a>
+                                    <a href="sante.html" class="btn btn-danger btn-lg">Cliquez ici</a>
                                 </div>
                             </div>
                         </div>
                         </div>
         </div>
-        <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+        <a href="#myCarousel" data-slide="prev" class="carousel-control-prev" aria-label="photo précedente">
             <span class="carousel-control-prev-icon"></span>
         </a>
-        <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+        <a href="#myCarousel" data-slide="next" class="carousel-control-next" aria-label="photo suivante">
                 <span class="carousel-control-next-icon"></span>
             </a>
     </div>
@@ -143,7 +143,7 @@
 </section>
 
 <!-- Home heading section -->
-<section id="home-heading" class="p-5">
+<section id="home-heading" class="p-5" style="background-size: cover;">
 <div class="dark-overlay">
     <div class="row">
         <div class="col">
@@ -162,7 +162,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <h1>Que Faisons Nous?</h1>
+            <h2>Que Faisons Nous?</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum gravida cursus.
                 Nunc eget efficitur erat. Curabitur at lacus commodo, vulputate ante at, condimentum urna.
                 Vivamus iaculis leo nec enim placerat tempus. Etiam tristique sapien a enim fermentum, et imperdiet ligula facilisis.
@@ -173,7 +173,7 @@
                 Proin commodo rhoncus nisi, ac consectetur tortor dictum vitae.</p>
         </div>
         <div class="col-md-6">
-            <img src="img/Que%20faisons%20nous.jpg" alt="" class="img-fluid rounded-circle d-none d-md-block about-img">
+            <img src="img/Que%20faisons%20nous.webp" alt="Etudier une demande de devis gratuitement" class="img-fluid rounded-circle d-none d-md-block about-img">
         </div>
     </div>
 </div>
@@ -197,9 +197,10 @@
         </div>
 </footer>
 
-<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="js/popper.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script async src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/style.js"></script>
 </body>
 

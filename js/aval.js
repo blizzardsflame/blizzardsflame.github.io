@@ -10,6 +10,8 @@ $(function () {
     // when the form is submitted
     $('#autoform').on('submit', function (e) {
 
+        $('#autoform').validator('update');
+
         // if the validator does not prevent form submit
         if (!e.isDefaultPrevented()) {
             var url = "processauto.php";
@@ -34,6 +36,7 @@ $(function () {
                     if (messageAlert && messageText) {
                         // inject the alert to .messages div in our form
                         $('#autoform').find('.messages').html(alertBox);
+                        self.scrollTo(0,0);
                         $('#autoform')[0].reset();
                     }
                 }
