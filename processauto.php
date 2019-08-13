@@ -5,6 +5,7 @@ $mysqli = new mysqli('localhost','root','infernos1','balandingassurance');
 $civilite = $_POST['civilite'];
 $name = $_POST['nom'];
 $prenom = $_POST['prenom'];
+$nomsociete = $_POST['nomsociete'];
 $adresse = $_POST['adresse'];
 $ville = $_POST['ville'];
 $code_postal = $_POST['codepostal'];
@@ -12,6 +13,7 @@ $date_de_naissance = $_POST['datedenaissance'];
 $tel1 = $_POST['tel1'];
 $tel2 = $_POST['tel2'];
 $email = $_POST['email'];
+$email2 = $_POST['email2'];
 $date_obt_permis = $_POST['datepermis'];
 $profession = $_POST['profession'];
 $usage_vehicule = $_POST['usagevehicule'];
@@ -32,9 +34,9 @@ $errorMessage = 'il y a eu un probleme avec votre demande. Rééssayez SVP';
 try
 {
 
-    if(count($_POST) == 0) throw new \Exception('Form is empty');
+    if(count($_POST) === 0) throw new \Exception('Form is empty');
 
-    $result = $mysqli->query("insert into autoform values('','$civilite','$name','$prenom','$adresse','$ville','$code_postal','$date_de_naissance','$tel1','$tel2','$email','$date_obt_permis','$profession','$usage_vehicule','$marque_voi','$model_voi','$energie','$coefmalus','$motif_resil','$info_comp','$term_condition')");
+    $result = $mysqli->query("insert into autoform values('','$civilite','$name','$prenom','$nomsociete','$adresse','$ville','$code_postal','$date_de_naissance','$tel1','$tel2','$email','$email2','$date_obt_permis','$profession','$usage_vehicule','$marque_voi','$model_voi','$energie','$coefmalus','$motif_resil','$info_comp','$term_condition')");
 
     $responseArray = array('type' => 'success', 'message' => $okMessage);
 }
